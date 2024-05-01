@@ -1,0 +1,26 @@
+{
+  "name": "tabuada_web",
+  "version": "1.0.0",
+  "description": "Tabuada em js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamvxr/Tabuada_Web.git"
+  },
+  "keywords": [
+    "node",
+    "http",
+    "ppi"
+  ],
+  "author": "Adam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamvxr/Tabuada_Web/issues"
+  },
+  "homepage": "https://github.com/adamvxr/Tabuada_Web#readme"
+}
