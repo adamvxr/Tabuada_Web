@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/adamvxr/Tabuada_Web/issues"
   },
-  "homepage": "https://github.com/adamvxr/Tabuada_Web#readme"
+  "homepage": "https://github.com/adamvxr/Tabuada_Web#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
