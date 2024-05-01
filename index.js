@@ -4,21 +4,22 @@ const host = '0.0.0.0';
 const porta = 3000;
 const app = express();
 
-function retornaPaginaInicial(requisicao, resposta){
-    resposta.write('<!DOCTYPE html>');
-    resposta.write('<html>');
-    resposta.write('<head>');
-    resposta.write('<meta charset="utf-8">');
-    resposta.write('<title>Pagina Inicial</title>');
-    resposta.write('</head>');
-    resposta.write('<body>');
-    resposta.write('<h1>Página Inicial</h1>');
-    resposta.write('</body>');
-    resposta.write('</html>');
-    resposta.end();
+function geraTabuada(numero) {
+    let tabuada = '<h1>Tabuada do ' + numero + '</h1>';
+    tabuada += '<ul>';
+    for (let i = 0; i <= 10; i++) {
+        tabuada += '<li>' + numero + ' x ' + i + ' = ' + (numero * i) + '</li>';
+    }
+    tabuada += '</ul>';
+    return tabuada;
 }
+ //http://localhost:3000/tabuada?numero=x
+app.get('/tabuada', (req, res) => {
+    const numero = parseInt(req.query.numero) || 1;
+    const tabuada = geraTabuada(numero);
+    res.send(tabuada);
+});
 
-app.get("/", retornaPaginaInicial);
 
 app.listen(porta, host, () => {
     console.log("Servidor esta executando em http://" + host + ":" + porta);
